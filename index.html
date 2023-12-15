@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+</head>
+
+<body>
+    
+    <!-- navbar section start -->
+    <header class="navbar">
+        <!-- <a href="#"></a> -->
+        <a href="#" class="logo"><i class="fa-solid fa-brain"></i> Mental Solutions</a>
+        <nav class="list">
+            <a href="#HOME">HOME</a>
+            <a href="#features">ABOUT-US</a>
+            <a href="#products">FEATURES</a>
+            <a href="#categories">Talk to a psychiatrist</a>
+            <a href="#review">REVIEWS</a>
+            <a href="#blos">BLOGS</a>
+        </nav>
+        <div class="icon">
+            <div class="fa-solid fa-bars" id="bar-style"></div>
+            <div class="fa-solid fa-magnifying-glass" id="search_bar"></div>
+            <a href="#" id="btn"><span>log-in</span></a>
+        </div>
+        <form action="" class="search_box">
+            <input type="search" id="search_here" placeholder="Search Here....">
+            <label for="search_here" class="fa-solid fa-search"></label>
+        </form>
+
+    </header>
+    <!-- navbar section end -->
+    <!-- <section class="home" id="home">
+        <div class="content">
+            <h2>Make it your <span>happiness</span>with Mantle Solutions</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse minima doloremque provident veritatis
+                dolorem eius nisi ducimus impedit explicabo ex corporis ipsa placeat recusandae nam, id excepturi dolor
+                hic!
+            </p>
+
+
+            <a href="#">Join Now For Free</a>
+        </div>
+    </section> -->
+
+
+    <section class="home" id="home">
+        <div class="img">
+            <img src="SIM-imge/img3.png" alt="">
+        </div>
+        <div class="content">
+            <h3>Make it your <span id="type_js">happiness</span></h3>
+            <h3>with Mental Solutions</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, possimus optio. Deleniti praesentium
+                quam, at repudiandae voluptatum corporis error dolores.
+            </p>
+            <a href="#" class="big_btn"><span>Test Your Mental Health</span></a>
+
+
+        </div>
+    </section>
+    <!-- script for button style  start-->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#type_js", {
+            strings: ["happiness","helllo","heyyyy","Eatingg"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+
+        })
+    </script>
+    <script>
+        const btn = document.querySelector('#btn');
+        btn.onmousemove = function (e) {
+            const x = e.pageX - btn.offsetLeft;
+            const y = e.pageY - btn.offsetTop;
+
+            btn.style.setProperty('--x', x + 'px');
+            btn.style.setProperty('--y', y + 'px');
+
+        }
+    </script>
+    <!-- script for button style  for end -->
+    <script>
+        let searchForm = document.querySelector('.search_box');
+        document.querySelector('#search_bar').onclick = () => {
+            searchForm.classList.toggle('active');
+            // searchForm.classList.remove('active');
+            list.classList.remove('active');
+        }
+
+        let list = document.querySelector('.list');
+        document.querySelector('#bar-style').onclick = () => {
+            list.classList.toggle('active');
+            searchForm.classList.remove('active');
+            // list.classList.remove('active');
+        }
+
+
+        window.onscroll = () => {
+            searchForm.classList.remove('active');
+            list.classList.remove('active');
+
+        }
+    </script>
+    <script>
+        const btn1 = document.querySelector('.big_btn');
+        btn1.onmousemove = function(e){
+            const x1 = e.pageX - btn1.offsetLeft;
+            const y1 = e.pageY - btn1.offsetTop;
+            
+            btn1.style.setProperty('--x1', x1 + 'px');
+            btn2.style.setProperty('--y1', y1 + 'px');
+        } 
+    </script>
+</body>
+
+</html>
